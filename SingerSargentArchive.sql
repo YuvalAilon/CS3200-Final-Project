@@ -131,7 +131,7 @@ CREATE TABLE ArtifactSetRelations(
     artifactSetID int,
     artifactID int,
     PRIMARY KEY (artifactSetID, artifactID),
-    FOREIGN KEY (artifactID) REFERENCES Artifact (artifactID),
+    FOREIGN KEY (artifactID) REFERENCES Artifact (artifactID) ON UPDATE CASCADE ON DELETE CASCADE,
     FOREIGN KEY (artifactSetID) REFERENCES ArtifactSet (artifactSetID)
 );
 
@@ -139,7 +139,7 @@ CREATE TABLE ArtifactRequestRelations(
     requestID int,
     artifactID int,
     PRIMARY KEY (requestID, artifactID),
-    FOREIGN KEY (artifactID) REFERENCES Artifact (artifactID),
+    FOREIGN KEY (artifactID) REFERENCES Artifact (artifactID) ON UPDATE CASCADE ON DELETE CASCADE ,
     FOREIGN KEY (requestID) REFERENCES ArtifactRequest (requestID)
 );
 
