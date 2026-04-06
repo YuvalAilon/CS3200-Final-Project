@@ -6,9 +6,9 @@ VALUES (1, 'Archivist'),
        (3, 'Director');
 
 INSERT INTO MuseumWorker
-VALUES (3324, 'Veronica-Elizabeth', NULL, 'Hawthorne', 'v.hawthorne@theMET.org', 1),
-       (3326, 'Watney', 'Alex', 'Busch', 'w.busch@theMET.org', 2),
-       (3327, 'Marshal', NULL, 'Jacobson', 'm.jacobson@theMET.org', 3);
+VALUES (3324, 'Veronica-Elizabeth', NULL, 'Hawthorne', 'v.hawthorne@theMET.org', '(934)-333-2984', 1),
+       (3326, 'Watney', 'Alex', 'Busch', 'w.busch@theMET.org', '(847)-049-1192', 2),
+       (3327, 'Marshal', NULL, 'Jacobson', 'm.jacobson@theMET.org', '(209)-849-2811', 3);
 
 INSERT INTO MuseumBranch
 VALUES (432110, 'The Metropolitan Museum of Art', 'Whitney W. Donhauser', '(443)-183-0293', 'donhauser.whitney@gmail.com',

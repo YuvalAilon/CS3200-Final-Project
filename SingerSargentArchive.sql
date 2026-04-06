@@ -51,7 +51,6 @@ CREATE TABLE Exhibits(
     description text,
     dateStart DATETIME NOT NULL,
     dateEnd DATETIME,
-    status ENUM('in use', 'available', 'closed') NOT NULL,
     FOREIGN KEY (galleryID) REFERENCES Galleries (galleryID)
 );
 
@@ -113,7 +112,6 @@ CREATE TABLE Artifact(
     description text,
     imageURL text,
     artifactCondition ENUM('pristine', 'good', 'fair', 'poor', 'requires restoration'),
-    availability ENUM('available', 'on display', 'in gallery', 'on loan'),
     style varchar(50),
     createdYear int,
     medium varchar(50),
