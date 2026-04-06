@@ -15,6 +15,7 @@ CREATE TABLE MuseumWorker(
     middleName varchar(50),
     lastName varchar(50),
     email varchar(50),
+    phone varchar(15),
     roleID int,
     FOREIGN KEY (roleID) REFERENCES Roles (roleID)
 );
@@ -50,6 +51,7 @@ CREATE TABLE Exhibits(
     description text,
     dateStart DATETIME NOT NULL,
     dateEnd DATETIME,
+    status ENUM('in use', 'available', 'closed') NOT NULL,
     FOREIGN KEY (galleryID) REFERENCES Galleries (galleryID)
 );
 
@@ -111,6 +113,7 @@ CREATE TABLE Artifact(
     description text,
     imageURL text,
     artifactCondition ENUM('pristine', 'good', 'fair', 'poor', 'requires restoration'),
+    availability ENUM('available', 'on display', 'in gallery', 'on loan'),
     style varchar(50),
     createdYear int,
     medium varchar(50),
